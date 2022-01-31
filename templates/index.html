@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Say hello</title>
+		<link rel="stylesheet" href="{{
+		url_for('static', filename='css/main.css')}}">
+	</head>
+	<body>
+		<h1><a href="/worldcelebzone">Go to Worldcelebzone site</a></h1>
+		<h1><a href="/mealsoz">Go to Mealsoz site</a></h1>
+		<img src="https://raw.githubusercontent.com/MariyaSha/SimpleGreetingApp/main/logo.png">
+		<br>
+		<form action="greet" method="post">
+			{% for message in get_flashed_messages()%}
+				<p> {{message}} </p>
+			{% endfor %}
+			<br>
+			<input type="text" name="name_input">
+			<br>
+			<input type="submit" value="GREET" id="greet
+			">
+		</from>
+	</body>
+</html>
